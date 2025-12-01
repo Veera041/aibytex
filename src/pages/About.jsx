@@ -1,9 +1,71 @@
 // src/pages/About.jsx
 
+import { useEffect, useRef, useState } from "react";
 import PageWrapper from "../components/layout/PageWrapper";
 import SectionTitle from "../components/ui/SectionTitle";
 
+/**
+ * Animated counter hook
+ */
+function useAnimatedCount(to, startWhen, duration = 1200) {
+  const [value, setValue] = useState(0);
+  const rafRef = useRef(null);
+
+  useEffect(() => {
+    if (!startWhen) return;
+    const start = performance.now();
+
+    function step(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // easeOutQuad
+      const eased = 1 - (1 - progress) * (1 - progress);
+      const current = Math.floor(to * eased);
+      setValue(current);
+
+      if (progress < 1) {
+        rafRef.current = requestAnimationFrame(step);
+      } else {
+        setValue(to);
+      }
+    }
+    rafRef.current = requestAnimationFrame(step);
+
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
+  }, [to, startWhen, duration]);
+
+  return value;
+}
+
 export default function About() {
+  const statsRef = useRef(null);
+  const [started, setStarted] = useState(false);
+
+  useEffect(() => {
+    if (!statsRef.current) return;
+    const el = statsRef.current;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setStarted(true);
+            obs.disconnect(); // run once
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  const projectsCount = useAnimatedCount(40, started, 1200);
+  const businessesCount = useAnimatedCount(20, started, 1200);
+  const yearsCount = useAnimatedCount(2, started, 1000);
+  const satisfactionCount = useAnimatedCount(100, started, 1400);
+
   return (
     <PageWrapper
       title="About"
@@ -103,27 +165,79 @@ export default function About() {
         </div>
       </section>
 
-      {/* Experience / Stats */}
-      <section className="py-14 bg-blue-600 text-white rounded-xl px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          <div>
-            <h3 className="text-4xl font-bold">40+</h3>
-            <p className="mt-2">Projects Completed</p>
-          </div>
+      {/* Experience / Stats with counting animation; plus sign attached without gap */}
+      <section className="py-14 bg-green-600 text-white rounded-xl px-6">
+        <div className="max-w-6xl mx-auto">
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center items-center"
+            ref={statsRef}
+          >
+            {/* Each stat: number + tightly attached plus */}
+            <div>
+              <h3 className="text-4xl font-bold" aria-live="polite">
+                {/* inline-flex with gap-0 to remove spacing between number and plus */}
+                <span className="inline-flex items-baseline gap-0 justify-center">
+                  <span className="leading-none">{projectsCount}</span>
+                  {/* plus attached with no extra whitespace */}
+                  <span
+                    className="text-xl leading-none"
+                    style={{ marginLeft: 0, transform: "translateY(-4px)" }}
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </span>
+              </h3>
+              <p className="mt-2">Projects Completed</p>
+            </div>
 
-          <div>
-            <h3 className="text-4xl font-bold">20+</h3>
-            <p className="mt-2">Businesses Helped</p>
-          </div>
+            <div>
+              <h3 className="text-4xl font-bold" aria-live="polite">
+                <span className="inline-flex items-baseline gap-0 justify-center">
+                  <span className="leading-none">{businessesCount}</span>
+                  <span
+                    className="text-xl leading-none"
+                    style={{ marginLeft: 0, transform: "translateY(-4px)" }}
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </span>
+              </h3>
+              <p className="mt-2">Businesses Helped</p>
+            </div>
 
-          <div>
-            <h3 className="text-4xl font-bold">4+ Years</h3>
-            <p className="mt-2">Experience</p>
-          </div>
+            <div>
+              <h3 className="text-4xl font-bold" aria-live="polite">
+                <span className="inline-flex items-baseline gap-0 justify-center">
+                  <span className="leading-none">{yearsCount}</span>
+                  <span
+                    className="text-xl leading-none"
+                    style={{ marginLeft: 0, transform: "translateY(-4px)" }}
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </span>
+              </h3>
+              <p className="mt-2">Years Experience</p>
+            </div>
 
-          <div>
-            <h3 className="text-4xl font-bold">100%</h3>
-            <p className="mt-2">Client Satisfaction</p>
+            <div>
+              <h3 className="text-4xl font-bold" aria-live="polite">
+                <span className="inline-flex items-baseline gap-0 justify-center">
+                  <span className="leading-none">{satisfactionCount}</span>
+                  <span
+                    className="text-xl leading-none"
+                    style={{ marginLeft: 0, transform: "translateY(-2px)" }}
+                    aria-hidden="true"
+                  >
+                    %
+                  </span>
+                </span>
+              </h3>
+              <p className="mt-2">Client Satisfaction</p>
+            </div>
           </div>
         </div>
       </section>
@@ -139,7 +253,7 @@ export default function About() {
 
         <a
           href="/contact"
-          className="inline-block mt-6 px-8 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition shadow"
+          className="inline-block mt-6 px-8 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-blue-700 transition shadow"
         >
           Contact Us
         </a>

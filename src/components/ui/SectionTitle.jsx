@@ -42,7 +42,7 @@ export default function SectionTitle({
 
       {/* Decorative underline (optional) */}
       <div className="mt-4 flex justify-center">
-        <span className="w-20 h-1 bg-blue-600 rounded-full"></span>
+        <span className="w-20 h-1 bg-green-600 rounded-full"></span>
       </div>
     </div>
   );

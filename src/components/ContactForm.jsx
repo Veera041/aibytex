@@ -19,12 +19,16 @@ import { useState } from "react";
 
 const defaultServices = [
   { value: "website-development", label: "Website Development" },
+  { value: "app-development", label: "App Development" },
   { value: "digital-marketing", label: "Digital Marketing" },
+  { value: "business-analytics", label: "Business Analytics" },
+  { value: "document-digitization", label: "Document Digitization (Paper → Digital)" },
   { value: "whatsapp-telegram-bots", label: "WhatsApp & Telegram Bots" },
   { value: "google-ads", label: "Google Ads" },
-  { value: "meta-ads", label: "Meta Ads" },
+  { value: "meta-ads", label: "Meta (Facebook & Instagram) Ads" },
   { value: "branding-ui-design", label: "Branding & UI Design" },
 ];
+
 
 export default function ContactForm({
   endpoint = "/api/contact",
@@ -143,7 +147,7 @@ export default function ContactForm({
             value={form.email}
             onChange={handleChange}
             className={`mt-2 px-3 py-2 rounded-md border ${errors.email ? "border-red-400" : "border-gray-200"} focus:outline-none focus:ring-2 focus:ring-blue-200`}
-            placeholder="you@domain.com"
+            placeholder="you@gmail.com"
             aria-invalid={!!errors.email}
             aria-describedby={errors.email ? "err-email" : undefined}
           />
@@ -226,7 +230,7 @@ export default function ContactForm({
         <button
           type="submit"
           disabled={loading}
-          className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-lg font-medium shadow hover:bg-blue-700 transition disabled:opacity-60"
+          className="inline-flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-lg font-medium shadow hover:bg-blue-700 transition disabled:opacity-60"
         >
           {loading ? "Sending..." : "Send Message"}
         </button>

@@ -1,5 +1,3 @@
-// src/data/testimonialsData.js
-
 const testimonialsData = [
   {
     id: 1,
@@ -8,7 +6,7 @@ const testimonialsData = [
     image: "/assets/images/testimonials/arun.jpg",
     review:
       "VeeraTech delivered our business website exactly the way we wanted. Clean design, fast loading, and great communication throughout the project.",
-    rating: 5,
+    rating: 4.5,
   },
 
   {
@@ -28,7 +26,7 @@ const testimonialsData = [
     image: "/assets/images/testimonials/suresh.jpg",
     review:
       "The WhatsApp ordering bot they developed has saved us a lot of time. Customers find it easy, and we get instant notifications. Great work!",
-    rating: 5,
+    rating: 4,
   },
 
   {
@@ -49,6 +47,17 @@ const testimonialsData = [
     review:
       "Excellent communication, clean UI, and fast development. I highly recommend VeeraTech for anyone starting a new business website.",
     rating: 5,
+  },
+
+  // ⭐ NEW EXTRA TESTIMONIAL (ID: 6)
+  {
+    id: 6,
+    name: "Lavanya Devi",
+    role: "E-Commerce Business Owner",
+    image: "/assets/images/testimonials/lavanya.jpg",
+    review:
+      "VeeraTech built a fully functional ecommerce website for my business with payment integration and product management. The team was supportive and delivered on time. My sales improved within the first week!",
+    rating: 4.9,
   },
 ];
 

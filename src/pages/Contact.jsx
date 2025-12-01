@@ -56,14 +56,14 @@ export default function Contact() {
           <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
             <h4 className="text-md font-semibold text-gray-900">Quick links</h4>
             <div className="mt-4 grid grid-cols-1 gap-3">
-              <a href="/services" className="text-sm text-blue-600 hover:underline">View Services →</a>
-              <a href="/portfolio" className="text-sm text-blue-600 hover:underline">See Portfolio →</a>
-              <a href="/about" className="text-sm text-blue-600 hover:underline">About Us →</a>
+              <a href="/services" className="text-bold text-green-600 hover:underline">View Services →</a>
+              <a href="/portfolio" className="text-bold text-green-600 hover:underline">See Portfolio →</a>
+              <a href="/about" className="text-bold text-green-600 hover:underline">About Us →</a>
             </div>
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-            <h4 className="text-md font-semibold text-gray-900">Office Hours</h4>
+            <h4 className="text-md font-semibold text-gray-900">Working Hours</h4>
             <ul className="mt-3 text-sm text-gray-700 space-y-1">
               <li>Mon — Fri: 9:30 AM — 6:30 PM</li>
               <li>Sat: 10:00 AM — 3:00 PM</li>
@@ -108,14 +108,14 @@ export default function Contact() {
 
       {/* Small CTA */}
       <section className="mt-12 text-center">
-        <div className="inline-block bg-blue-50 px-6 py-4 rounded-xl">
-          <h4 className="text-lg font-semibold text-blue-700">Prefer a quick call?</h4>
-          <p className="text-sm text-blue-600 mt-1">Schedule a 30-minute free consultation and we’ll discuss your project.</p>
+        <div className="inline-block bg-green-100 px-6 py-4 rounded-xl">
+          <h4 className="text-lg font-semibold text-green-700">Prefer a quick call?</h4>
+          <p className="text-sm text-green-600 mt-1">Schedule a 30-minute free consultation and we’ll discuss your project.</p>
           <a
             href="https://calendly.com/your-calendly"
             target="_blank"
             rel="noreferrer"
-            className="inline-block mt-4 px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+            className="inline-block mt-4 px-5 py-2 bg-green-600 text-white rounded-lg hover:bg-blue-700 transition"
           >
             Book a free consultation
           </a>

@@ -24,7 +24,7 @@ export default function PortfolioCard({
 
       {/* Content */}
       <div className="p-5">
-        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+        <h3 className="text-lg font-semibold text-green-600">{title}</h3>
         <p className="text-sm text-gray-500 mt-1">{category}</p>
 
         <p className="text-sm text-gray-700 mt-3 leading-relaxed">{shortDesc}</p>
@@ -49,7 +49,7 @@ export default function PortfolioCard({
             href={link}
             target="_blank"
             rel="noreferrer"
-            className="text-sm font-medium text-blue-600 hover:underline"
+            className="text-sm font-medium text-green-600 hover:underline"
           >
             View Project →
           </a>

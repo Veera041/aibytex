@@ -108,6 +108,63 @@ const servicesData = [
       "Social media templates",
     ],
   },
+
+  // NEW: App Development
+  {
+    id: 7,
+    icon: "📱",
+    title: "App Development",
+    shortDesc: "Native & cross-platform mobile apps (iOS & Android) to reach users on the go.",
+    longDesc:
+      "We build performant, user-friendly mobile applications — native (Swift/Kotlin) or cross-platform (Flutter/React Native). From concept and UI/UX to publishing on App Store and Play Store, we handle the full lifecycle.",
+    slug: "app-development",
+    category: "Development",
+    benefits: [
+      "Native & cross-platform options",
+      "App store publishing support",
+      "Secure user authentication",
+      "Offline capability & performance tuning",
+      "Push notifications & analytics",
+    ],
+  },
+
+  // NEW: Business Analytics & Reporting
+  {
+    id: 8,
+    icon: "📈",
+    title: "Business Analytics & Reporting",
+    shortDesc: "Turn raw data into actionable insights with dashboards and reports.",
+    longDesc:
+      "We implement data pipelines, analytics tracking, and interactive dashboards (Power BI, Looker, or custom) to help you understand user behaviour and business performance. Includes KPIs, monthly reports, and conversion optimization recommendations.",
+    slug: "business-analytics",
+    category: "Analytics",
+    benefits: [
+      "Custom dashboards & visualizations",
+      "KPI definition & tracking",
+      "Data pipeline & ETL setup",
+      "Monthly performance reports",
+      "A/B test insights and recommendations",
+    ],
+  },
+
+  // NEW: Document Digitization & Data Entry (user papers -> digital records)
+  {
+    id: 9,
+    icon: "🗂️",
+    title: "Document Digitization & Data Entry",
+    shortDesc: "Scan, clean, and convert user paperwork into secure, searchable digital records.",
+    longDesc:
+      "We digitize physical documents (ID proofs, name papers, certificates), apply OCR/cleanup, and convert them into structured digital records. Includes manual verification, secure storage setup, and optional data-entry into your system.",
+    slug: "document-digitization",
+    category: "Data Services",
+    benefits: [
+      "High-accuracy OCR + manual verification",
+      "Secure handling & storage",
+      "Structured data export (CSV/Excel/DB)",
+      "Name & field validation",
+      "Batch processing for large volumes",
+    ],
+  },
 ];
 
 export default servicesData;

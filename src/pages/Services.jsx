@@ -98,16 +98,16 @@ export default function Services() {
       )}
 
       {/* CTA */}
-      <section className="mt-12 bg-blue-50 rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <section className="mt-12 bg-green-50 rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
-          <h3 className="text-xl font-semibold text-blue-800">Not sure which service fits?</h3>
-          <p className="text-sm text-blue-700 mt-1">Book a free 30-minute consultation and we'll suggest the best plan.</p>
+          <h3 className="text-xl font-semibold text-green-800">Not sure which service fits?</h3>
+          <p className="text-sm text-green-700 mt-1">Book a free 30-minute consultation and we'll suggest the best plan.</p>
         </div>
 
         <div className="flex gap-3">
           <a
             href="/contact"
-            className="px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+            className="px-5 py-3 bg-green-600 text-white rounded-lg hover:bg-blue-700 transition"
           >
             Request a Quote
           </a>
