@@ -4,7 +4,7 @@ const portfolioData = [
   {
     id: 1,
     title: "E-Commerce Fashion Store",
-    image: "/assets/images/portfolio/fashion-store.jpg",
+    image: "src/assets/images/ecom1.jpeg",
     category: "E-Commerce",
     shortDesc: "A stylish and responsive e-commerce store with product filters and checkout flow.",
     longDesc:
@@ -16,7 +16,7 @@ const portfolioData = [
   {
     id: 2,
     title: "Business Portfolio Website",
-    image: "/assets/images/portfolio/business-portfolio.jpg",
+    image: "src/assets/images/business.jpeg",
     category: "Business Website",
     shortDesc: "A clean portfolio website showcasing services, work, and contact details.",
     longDesc:
@@ -28,7 +28,7 @@ const portfolioData = [
   {
     id: 3,
     title: "Restaurant Ordering Website",
-    image: "/assets/images/portfolio/restaurant-order.jpg",
+    image: "src/assets/images/rest.jpeg",
     category: "Food & Delivery",
     shortDesc: "Online menu, order system, table reservation and live order notifications.",
     longDesc:
@@ -40,7 +40,7 @@ const portfolioData = [
   {
     id: 4,
     title: "Digital Marketing Landing Page",
-    image: "/assets/images/portfolio/marketing-landing.jpg",
+    image: "src/assets/images/digit.jpeg",
     category: "Landing Page",
     shortDesc: "High-converting landing page for ad campaigns with tracking & analytics.",
     longDesc:
@@ -52,7 +52,7 @@ const portfolioData = [
   {
     id: 5,
     title: "WhatsApp Automation Bot",
-    image: "/assets/images/portfolio/whatsapp-bot.jpg",
+    image: "src/assets/images/auto.jpeg",
     category: "Automation",
     shortDesc: "Automated replies, notifications, lead collection, and CRM integration.",
     longDesc:
@@ -64,7 +64,7 @@ const portfolioData = [
   {
     id: 6,
     title: "Real Estate Listing Platform",
-    image: "/assets/images/portfolio/realestate-platform.jpg",
+    image: "src/assets/images/real.jpeg",
     category: "Real Estate",
     shortDesc: "Property listings, filters, enquiry forms and agent dashboard.",
     longDesc:

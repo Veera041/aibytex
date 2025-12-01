@@ -98,14 +98,19 @@ export default function About() {
             </p>
           </div>
 
-          {/* Image */}
-          <div className="flex justify-center">
-            <img
-              src="/assets/images/about/about-team.jpg"
-              alt="About QuadCore"
-              className="w-full max-w-md rounded-xl shadow-lg object-cover"
-            />
-          </div>
+          {/* Logo Video */}
+<div className="flex justify-center">
+  <video
+    src="/src/assets/videos/Quadcore.mp4"
+    className="w-full max-w-md rounded-xl shadow-lg object-cover"
+    autoPlay
+    muted
+    loop        // 🔥 video will play continuously
+    playsInline
+  />
+</div>
+
+
         </div>
       </section>
 

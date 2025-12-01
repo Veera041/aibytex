@@ -44,7 +44,7 @@ export default function PortfolioCard({
         )}
 
         {/* CTA */}
-        <div className="mt-5 flex justify-between items-center">
+        {/* <div className="mt-5 flex justify-between items-center">
           <a
             href={link}
             target="_blank"
@@ -60,7 +60,7 @@ export default function PortfolioCard({
           >
             Details
           </a>
-        </div>
+        </div> */}
       </div>
     </article>
   );
