@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <PageWrapper
       title="Home"
-      description="VeeraTech provides professional website development, digital marketing, automation bots, Google & Meta ads, and branding solutions."
+      description="QuadCore provides professional website development, digital marketing, automation bots, Google & Meta ads, and branding solutions."
     >
       {/* HERO SECTION with responsive background image */}
       <section

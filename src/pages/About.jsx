@@ -69,11 +69,11 @@ export default function About() {
   return (
     <PageWrapper
       title="About"
-      description="Learn more about VeeraTech — website development, digital marketing, automation bots, and advertising solutions."
+      description="Learn more about QuadCore — website development, digital marketing, automation bots, and advertising solutions."
     >
       {/* INTRO */}
       <SectionTitle
-        title="About VeeraTech"
+        title="About QuadCore"
         subtitle="Your trusted partner for websites, marketing, automation, and growth."
       />
 
@@ -85,7 +85,7 @@ export default function About() {
               Who We Are
             </h3>
             <p className="text-gray-700 leading-relaxed mb-4">
-              VeeraTech is a modern freelance agency specializing in website
+              QuadCore is a modern freelance agency specializing in website
               development, digital marketing, WhatsApp & Telegram bots, Google &
               Meta Ads, and branding solutions. We help businesses create
               powerful online presence and generate real, measurable growth.
@@ -102,7 +102,7 @@ export default function About() {
           <div className="flex justify-center">
             <img
               src="/assets/images/about/about-team.jpg"
-              alt="About VeeraTech"
+              alt="About QuadCore"
               className="w-full max-w-md rounded-xl shadow-lg object-cover"
             />
           </div>

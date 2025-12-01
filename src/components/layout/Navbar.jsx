@@ -97,7 +97,7 @@ export default function Navbar() {
           <div className="container mx-auto px-4 py-3 flex justify-between items-center relative">
             {/* Logo */}
             <Link to="/" className="text-xl font-bold text-gray-900">
-              AIBytex
+              QuadCore
             </Link>
 
             {/* Desktop links (md+) */}
@@ -106,7 +106,7 @@ export default function Navbar() {
                 ["Home", "/"],
                 ["Services", "/services"],
                 ["Portfolio", "/portfolio"],
-                ["About", "/about"],
+                ["About Us", "/about"],
                 ["Contact", "/contact"],
               ].map(([label, to]) => (
                 <li key={label}>
@@ -152,7 +152,7 @@ export default function Navbar() {
               <li><Link to="/" onClick={() => setOpen(false)} className="block py-2 hover:text-green-500 focus:text-green-500 cursor-pointer">Home</Link></li>
               <li><Link to="/services" onClick={() => setOpen(false)} className="block py-2 hover:text-green-500 focus:text-green-500 cursor-pointer">Services</Link></li>
               <li><Link to="/portfolio" onClick={() => setOpen(false)} className="block py-2 hover:text-green-500 focus:text-green-500 cursor-pointer">Portfolio</Link></li>
-              <li><Link to="/about" onClick={() => setOpen(false)} className="block py-2 hover:text-green-500 focus:text-green-500 cursor-pointer">About</Link></li>
+              <li><Link to="/about" onClick={() => setOpen(false)} className="block py-2 hover:text-green-500 focus:text-green-500 cursor-pointer">About Us</Link></li>
               <li><Link to="/contact" onClick={() => setOpen(false)} className="block py-2 hover:text-green-500 focus:text-green-500 cursor-pointer">Contact</Link></li>
             </ul>
           </div>
