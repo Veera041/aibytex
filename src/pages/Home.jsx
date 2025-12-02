@@ -5,7 +5,6 @@ import PortfolioCard from "../components/PortfolioCard";
 import TestimonialCard from "../components/TestimonialCard";
 import TestimonialsCarousel from "../components/TestimonialsCarousel";
 
-
 // Data
 import servicesData from "../data/servicesData";
 import portfolioData from "../data/portfolioData";
@@ -23,7 +22,7 @@ export default function Home() {
         aria-label="Hero"
         style={{
           // put your hero image at public/images/hero-bg.jpg or change the path
-          backgroundImage: `url('src/assets/images/hero-bg.jpeg')`,
+          backgroundImage: `url('src/assets/images/hero-bg.png')`,
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
