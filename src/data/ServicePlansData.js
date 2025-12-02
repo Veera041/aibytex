@@ -6,32 +6,17 @@ const ServicePlansData = {
     description:
       "Responsive, SEO-friendly websites with modern UI using React or HTML.",
     plans: [
-      {
+            {
         id: "basic",
-        name: "Basic Website",
-        price: "₹8,999",
+        name: "Portfolio",
+        price: "₹1999",
         features: [
           "3 Pages",
-          "Contact Form",
-          "Mobile Responsive",
-          "1 Revision"
-        ],
-        steps: [
-          "Requirement collection",
-          "UI wireframe design",
-          "Website development",
-          "Testing & launch"
-        ]
-      },
-      {
-        id: "standard",
-        name: "Standard Website",
-        price: "₹14,999",
-        features: [
-          "6–8 Pages",
-          "SEO Basic Setup",
-          "Blog Setup",
-          "2 Revisions"
+          "Responsive design",
+          "Basic animations",
+          "Contact form (Email)",
+          "Free Hosting",
+          "24/7-support"
         ],
         steps: [
           "Detailed requirement call",
@@ -42,23 +27,76 @@ const ServicePlansData = {
         ]
       },
       {
-        id: "premium",
-        name: "Premium Website",
-        price: "₹24,999",
+        id: "standard",
+        name: "Business & static Website",
+        price: "₹2999",
         features: [
-          "Unlimited Pages",
-          "Admin Panel (CMS)",
-          "Advanced SEO",
-          "3 Months Support"
+          "SEO setup",
+          "Free domain",
+          "Free SSL HTTPS",
+          "6 Pages",
+          "Contact Form",
+          "Mobile Responsive",
+          "Free Hosting 1 year",
+          "Free 1 month maintance",
+          "1 Revision",
+          "24/7-support"
         ],
         steps: [
-          "Brand analysis",
-          "Full UI/UX design",
-          "Backend + Frontend development",
-          "SEO & security setup",
-          "Launch + support"
+          "Requirement collection",
+          "UI wireframe design",
+          "Website development",
+          "Testing & launch"
         ]
-      }
+      },
+      {
+        id: "",
+        name: "E-commerce website",
+        price: "₹5,999",
+        features: [
+          "200 product pages",
+          "User login system",
+          "Blog Setup",
+          "Free domain",
+          "Order management",
+          "Admin Panel",
+          "Payment getway rezorpay",
+          "Cod options",
+          "High performance Hosting",
+          "2 Revisions",
+          "24/7-support"
+        ],
+        steps: [
+          "Detailed requirement call",
+          "UI/UX design mockup",
+          "Frontend development",
+          "SEO setup",
+          "Deployment"
+        ]
+      },
+      // {
+      //   id: "premium",
+      //   name: "Premium Website",
+      //   price: "₹11,999",
+      //   features: [
+      //     "Free domain",
+      //     "Unlimited Pages",
+      //     "Admin Panel (CMS)",
+      //     "Advanced SEO",
+      //     "Fully custome design",
+      //     "Testimonials + Clients logo",
+      //     "High performance hosting support",
+      //     "3 Months Support + Maintance",
+      //     "24/7-support"
+      //   ],
+      //   steps: [
+      //     "Brand analysis",
+      //     "Full UI/UX design",
+      //     "Backend + Frontend development",
+      //     "SEO & security setup",
+      //     "Launch + support"
+      //   ]
+      // }
     ]
   },
 

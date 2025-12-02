@@ -6,13 +6,13 @@ import { useLocation } from "react-router-dom";
  * PageWrapper
  *
  * Props:
- *  - title (string)        : page title (will append " — QuadCore")
+ *  - title (string)        : page title (will append " — Gidorha")
  *  - description (string)  : meta description (will create/update <meta name="description">)
  *  - className (string)    : extra UnoCSS/Tailwind classes for main wrapper
  *  - children              : page content
  *
  * Usage:
- *  <PageWrapper title="Home" description="QuadCore - Web dev & ads">
+ *  <PageWrapper title="Home" description="Gidorha - Web dev & ads">
  *    ...page content...
  *  </PageWrapper>
  */
@@ -27,7 +27,7 @@ export default function PageWrapper({ title, description, className = "", childr
 
     // Update document title if provided
     if (title) {
-      document.title = `${title} — QuadCore`;
+      document.title = `${title} — Gidorha`;
     }
 
     // Update (or create) meta description if provided

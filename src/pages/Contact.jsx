@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <PageWrapper
       title="Contact"
-      description="Contact QuadCore for website development, marketing, automation bots, Google & Meta Ads. Get a free quote or book a call."
+      description="Contact Gidorha for website development, marketing, automation bots, Google & Meta Ads. Get a free quote or book a call."
     >
       {/* Page title */}
       <SectionTitle
@@ -27,7 +27,7 @@ export default function Contact() {
 
             <ul className="mt-4 space-y-3 text-sm text-gray-700">
               <li><strong>Phone:</strong> <a href="tel:+919876543210" className="text-blue-600">+91 98765 43210</a></li>
-              <li><strong>Email:</strong> <a href="mailto:info@QuadCore.in" className="text-blue-600">info@QuadCore.in</a></li>
+              <li><strong>Email:</strong> <a href="mailto:info@Gidorha.com" className="text-blue-600">info@Gidorha.com</a></li>
               <li><strong>Working hours:</strong> Mon — Sat, 9:30 AM — 6:30 PM IST</li>
               <li><strong>Location:</strong> Chennai, Tamil Nadu, India</li>
             </ul>
@@ -95,7 +95,7 @@ export default function Contact() {
             {/* Replace src with your actual Google Maps embed link */}
             <div className="w-full h-64">
               <iframe
-                title="QuadCore location"
+                title="Gidorha location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31508.000000000000!2d80.0000000!3d13.0000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267d000000001%3A0x0000000000000000!2sChennai!5e0!3m2!1sen!2sin!4v0000000000000"
                 className="w-full h-full border-0"
                 loading="lazy"

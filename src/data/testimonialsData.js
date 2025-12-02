@@ -5,7 +5,7 @@ const testimonialsData = [
     role: "E-Learning App",
     image: "/assets/images/testimonials/arun.jpg",
     review:
-      "VeeraTech delivered our business website exactly the way we wanted. Clean design, fast loading, and great communication throughout the project.",
+      "Gidorha delivered our business website exactly the way we wanted. Clean design, fast loading, and great communication throughout the project.",
     rating: 4.5,
   },
 
@@ -45,7 +45,7 @@ const testimonialsData = [
     role: "Entrepreneur",
     image: "/assets/images/testimonials/dinesh.jpg",
     review:
-      "Excellent communication, clean UI, and fast development. I highly recommend VeeraTech for anyone starting a new business website.",
+      "Excellent communication, clean UI, and fast development. I highly recommend Gidorha for anyone starting a new business website.",
     rating: 5,
   },
 
@@ -56,7 +56,7 @@ const testimonialsData = [
     role: "E-Commerce Business Website",
     image: "/assets/images/testimonials/lavanya.jpg",
     review:
-      "VeeraTech built a fully functional ecommerce website for my business with payment integration and product management. The team was supportive and delivered on time. My sales improved within the first week!",
+      "Gidorha built a fully functional ecommerce website for my business with payment integration and product management. The team was supportive and delivered on time. My sales improved within the first week!",
     rating: 4.9,
   },
 ];

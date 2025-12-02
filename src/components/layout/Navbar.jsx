@@ -97,7 +97,7 @@ export default function Navbar() {
           <div className="container mx-auto px-4 py-3 flex justify-between items-center relative">
             {/* Logo */}
             <Link to="/" className="text-xl font-bold text-gray-900">
-              QuadCore
+              Gidorha
             </Link>
 
             {/* Desktop links (md+) */}

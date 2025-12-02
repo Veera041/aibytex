@@ -12,7 +12,7 @@ export default function Footer() {
 
           {/* Company Info */}
           <div>
-            <h2 className="text-xl font-bold text-white mb-3">QuadCore</h2>
+            <h2 className="text-xl font-bold text-white mb-3">Gidorha</h2>
             <p className="text-sm leading-relaxed">
               Freelance services for Web Development, Digital Marketing, Automation Bots,
               Google & Meta Ads. Delivering fast, clean and high-converting solutions.
@@ -50,7 +50,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-white mb-3">Contact</h3>
             <p className="text-sm">📞 +91 98765 43210</p>
-            <p className="text-sm">📧 info@QuadCore.in</p>
+            <p className="text-sm">📧 info@gidorha.com</p>
 
             <div className="flex items-center gap-4 mt-4">
 
@@ -88,7 +88,7 @@ export default function Footer() {
 
         {/* Bottom Footer */}
         <div className="text-center border-t border-gray-800 mt-8 pt-5 text-sm">
-          © {currentYear} QuadCore. All rights reserved.
+          © {currentYear} Gidorha. All rights reserved.
         </div>
       </div>
     </footer>

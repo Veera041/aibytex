@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <PageWrapper
       title="Home"
-      description="QuadCore provides professional website development, digital marketing, automation bots, Google & Meta ads, and branding solutions."
+      description="Gidorha provides professional website development, digital marketing, automation bots, Google & Meta ads, and branding solutions."
     >
       {/* HERO SECTION with responsive background image */}
       <section
@@ -119,9 +119,7 @@ export default function Home() {
   />
 </section>
 
-
 {/* Put this component inside the same file above or import from a small file */}
-
 
       {/* CTA Banner */}
       <section className="py-14 bg-green-600 text-white text-center rounded-xl shadow-md mb-8 mx-6 md:mx-auto">
