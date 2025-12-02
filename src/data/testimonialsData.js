@@ -2,7 +2,7 @@ const testimonialsData = [
   {
     id: 1,
     name: "Arun Kumar",
-    role: "Founder, AK Traders",
+    role: "E-Learning App",
     image: "/assets/images/testimonials/arun.jpg",
     review:
       "VeeraTech delivered our business website exactly the way we wanted. Clean design, fast loading, and great communication throughout the project.",
@@ -12,7 +12,7 @@ const testimonialsData = [
   {
     id: 2,
     name: "Priya Ramesh",
-    role: "Marketing Head, BrightFoods",
+    role: "Digital marketing website",
     image: "/assets/images/testimonials/priya.jpg",
     review:
       "Their digital marketing and Meta Ads management boosted our sales within the first month. Highly satisfied with their strategy and execution.",
@@ -22,7 +22,7 @@ const testimonialsData = [
   {
     id: 3,
     name: "Suresh Balaji",
-    role: "Owner, SB Restaurant",
+    role: "Restaurant Food Order Bot",
     image: "/assets/images/testimonials/suresh.jpg",
     review:
       "The WhatsApp ordering bot they developed has saved us a lot of time. Customers find it easy, and we get instant notifications. Great work!",
@@ -32,7 +32,7 @@ const testimonialsData = [
   {
     id: 4,
     name: "Meena Joseph",
-    role: "Real Estate Consultant",
+    role: "Real Estate Website",
     image: "/assets/images/testimonials/meena.jpg",
     review:
       "Our real estate listing platform looks professional and works perfectly. The team understood every requirement and delivered before the deadline.",
@@ -53,7 +53,7 @@ const testimonialsData = [
   {
     id: 6,
     name: "Lavanya Devi",
-    role: "E-Commerce Business Owner",
+    role: "E-Commerce Business Website",
     image: "/assets/images/testimonials/lavanya.jpg",
     review:
       "VeeraTech built a fully functional ecommerce website for my business with payment integration and product management. The team was supportive and delivered on time. My sales improved within the first week!",

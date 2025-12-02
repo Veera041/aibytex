@@ -4,7 +4,12 @@ import { BrowserRouter, Routes, Route, Navigate, useLocation, useParams } from "
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 
-/* Loading fallback shown while lazy pages are loading */
+// analytics helpers (from src/utils/analytics.js)
+import { trackPageView, trackTimeSpent } from "../utils/analytics";
+
+/* -------------------------
+   Loading fallback component
+   ------------------------- */
 function LoadingFallback() {
   return (
     <div className="min-h-screen flex items-center justify-center">
@@ -16,73 +21,140 @@ function LoadingFallback() {
   );
 }
 
-/* ScrollToTop component should be used inside Router */
+/* -------------------------
+   ScrollToTop (must be used *inside* Router)
+   ------------------------- */
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
-    // smooth behavior only when route changes
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    // smooth behavior when route changes
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
   }, [pathname]);
   return null;
 }
 
-/* ProtectedRoute — simple pattern to guard routes */
+/* -------------------------
+   Focus main content for accessibility after navigation
+   (Ensure your PageWrapper or pages render an element with id="main-content")
+   ------------------------- */
+function FocusOnRoute() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    const el = document.getElementById("main-content");
+    if (el) {
+      // small timeout to wait for route render, then focus
+      setTimeout(() => {
+        el.tabIndex = -1;
+        el.focus({ preventScroll: true });
+      }, 80);
+    }
+  }, [pathname]);
+  return null;
+}
+
+/* -------------------------
+   Analytics tracker (tracks page view + time spent)
+   - call trackTimeSpent() for previous page, then trackPageView() for new page
+   ------------------------- */
+function AnalyticsTracker() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    // Save time spent for previous page (if any)
+    try {
+      trackTimeSpent();
+    } catch (err) {
+      // ignore analytics failures silently
+      // console.warn("trackTimeSpent failed", err);
+    }
+
+    // Track current page view
+    try {
+      trackPageView(pathname);
+    } catch (err) {
+      // console.warn("trackPageView failed", err);
+    }
+
+    // Optional: you could also sync to server periodically or on unload
+  }, [pathname]);
+
+  // on unmount (or before unload) we can push last page time
+  useEffect(() => {
+    const handler = () => {
+      try {
+        trackTimeSpent();
+      } catch {}
+    };
+    window.addEventListener("beforeunload", handler);
+    return () => window.removeEventListener("beforeunload", handler);
+  }, []);
+
+  return null;
+}
+
+/* -------------------------
+   ProtectedRoute — simple pattern to guard routes
+   ------------------------- */
 function ProtectedRoute({ isAllowed, children, redirectTo = "/contact" }) {
   if (!isAllowed) return <Navigate to={redirectTo} replace />;
   return children;
 }
 
-/* Redirect helper: /services/:slug -> /plans/:slug */
+/* -------------------------
+   Redirect helper: /services/:slug -> /plans/:slug
+   ------------------------- */
 function ServicesSlugRedirect() {
   const { slug } = useParams();
   return <Navigate to={`/plans/${slug}`} replace />;
 }
 
-/* Lazy pages */
+/* -------------------------
+   Lazy-loaded pages
+   ------------------------- */
 const Home = lazy(() => import("../pages/Home"));
 const Services = lazy(() => import("../pages/Services"));
 const ServicePlans = lazy(() => import("../pages/ServicePlans")); // /plans/:slug
 const Portfolio = lazy(() => import("../pages/Portfolio"));
 const About = lazy(() => import("../pages/About"));
 const Contact = lazy(() => import("../pages/Contact"));
-// const Pricing = lazy(() => import("../pages/Pricing")); // keep if you have a pricing page
 const NotFound = lazy(() => import("../pages/NotFound"));
-/* Example protected page (uncomment & create if needed) */
-// const Dashboard = lazy(() => import("../pages/Dashboard"));
+// const Dashboard = lazy(() => import("../pages/Dashboard")); // optional
 
 /**
  * AppRoutes
- * - pass isLoggedIn prop to enable guarded routes
+ * - pass isLoggedIn prop to enable guarded routes (ProtectedRoute)
  */
 export default function AppRoutes({ isLoggedIn = false }) {
   return (
     <BrowserRouter>
-      {/* global header/nav */}
+      {/* Global header */}
       <Navbar />
 
-      {/* ensure scroll-to-top runs after route changes */}
+      {/* Utilities that rely on Router context */}
       <ScrollToTop />
+      <FocusOnRoute />
+      <AnalyticsTracker />
 
+      {/* Main routes */}
       <Suspense fallback={<LoadingFallback />}>
         <Routes>
           {/* Public pages */}
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
 
-          {/* Redirect older/alternate service detail path to plans */}
+          {/* Redirect older /services/:slug to the new /plans/:slug pattern */}
           <Route path="/services/:slug" element={<ServicesSlugRedirect />} />
 
-          {/* Service-specific plans page */}
+          {/* Service-specific plans/details */}
           <Route path="/plans/:slug" element={<ServicePlans />} />
 
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
 
-          {/* Pricing page (if you have one) */}
-          {/* <Route path="/pricing" element={<Pricing />} /> */}
-
-          {/* Example protected route (uncomment if you add Dashboard page) */}
+          {/* Example protected route (uncomment when you create Dashboard) */}
           {/*
           <Route
             path="/dashboard"
@@ -99,7 +171,7 @@ export default function AppRoutes({ isLoggedIn = false }) {
         </Routes>
       </Suspense>
 
-      {/* global footer */}
+      {/* Global footer */}
       <Footer />
     </BrowserRouter>
   );

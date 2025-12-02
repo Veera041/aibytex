@@ -6,11 +6,11 @@ export default function TestimonialCard({ name, role, image, review, rating }) {
 
       {/* Profile */}
       <div className="flex items-center gap-4">
-        <img
+        {/* <img
           src={image}
           alt={name}
           className="w-14 h-14 rounded-full object-cover border border-gray-200"
-        />
+        /> */}
 
         <div>
           <h3 className="text-lg font-semibold text-gray-900">{name}</h3>
