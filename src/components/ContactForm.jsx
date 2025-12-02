@@ -121,7 +121,7 @@ export default function ContactForm({
         </div>
         <div className="hidden sm:flex flex-col items-end text-right">
           <span className="text-xs text-gray-500">Or call</span>
-          <a href="tel:+919876543210" className="text-sm font-medium text-gray-800">+91 98765 43210</a>
+          <a href="tel:+919876543210" className="text-sm font-medium text-gray-800">+91 --</a>
         </div>
       </div>
 
@@ -259,7 +259,7 @@ export default function ContactForm({
           💬 Message on WhatsApp
         </a>
 
-        <p className="text-xs text-gray-500 mt-2 sm:mt-0">Prefer a quick call? <a className="font-medium text-gray-800" href="tel:+919876543210">+91 98765 43210</a></p>
+        <p className="text-xs text-gray-500 mt-2 sm:mt-0">Prefer a quick call? <a className="font-medium text-gray-800" href="tel:+919876543210">+91 --</a></p>
       </div>
     </form>
   );

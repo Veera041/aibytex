@@ -49,7 +49,7 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-3">Contact</h3>
-            <p className="text-sm">📞 +91 98765 43210</p>
+            <p className="text-sm">📞 +91 --</p>
             <p className="text-sm">📧 info@gidorha.com</p>
 
             <div className="flex items-center gap-4 mt-4">
@@ -69,7 +69,7 @@ export default function Footer() {
 
   {/* Telegram */}
   <a
-    href="https://t.me/yourtelegram"
+    href="https://t.me/gidorha"
     target="_blank"
     rel="noreferrer"
     className="text-blue-400 hover:text-blue-300 transition"
@@ -79,6 +79,25 @@ export default function Footer() {
       <path d="M9.036 15.082l-.396 5.598c.568 0 .815-.243 1.113-.533l2.665-2.55 5.517 4.044c1.012.558 1.723.265 1.992-.932l3.612-16.85c.331-1.596-.58-2.237-1.588-1.844L1.674 9.358c-1.56.608-1.548 1.48-.284 1.868l5.906 1.844 13.708-8.63-11.968 9.86z"/>
     </svg>
   </a>
+  {/* Instagram */}
+<a
+  href="https://instagram.com/gidorha"
+  target="_blank"
+  rel="noreferrer"
+  className="text-pink-500 hover:text-pink-400 transition"
+  aria-label="Instagram"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="28"
+    height="28"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+  >
+    <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-3a1.5 1.5 0 100 3 1.5 1.5 0 000-3z" />
+  </svg>
+</a>
+
 
 </div>
 

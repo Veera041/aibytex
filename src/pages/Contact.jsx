@@ -26,7 +26,7 @@ export default function Contact() {
             </p>
 
             <ul className="mt-4 space-y-3 text-sm text-gray-700">
-              <li><strong>Phone:</strong> <a href="tel:+919876543210" className="text-blue-600">+91 98765 43210</a></li>
+              <li><strong>Phone:</strong> <a href="tel:+919876543210" className="text-blue-600">--</a></li>
               <li><strong>Email:</strong> <a href="mailto:info@Gidorha.com" className="text-blue-600">info@Gidorha.com</a></li>
               <li><strong>Working hours:</strong> Mon — Sat, 9:30 AM — 6:30 PM IST</li>
               <li><strong>Location:</strong> Chennai, Tamil Nadu, India</li>
@@ -107,7 +107,7 @@ export default function Contact() {
       </div>
 
       {/* Small CTA */}
-      <section className="mt-12 text-center">
+      {/* <section className="mt-12 text-center">
         <div className="inline-block bg-green-100 px-6 py-4 rounded-xl">
           <h4 className="text-lg font-semibold text-green-700">Prefer a quick call?</h4>
           <p className="text-sm text-green-600 mt-1">Schedule a 30-minute free consultation and we’ll discuss your project.</p>
@@ -120,7 +120,7 @@ export default function Contact() {
             Book a free consultation
           </a>
         </div>
-      </section>
+      </section> */}
     </PageWrapper>
   );
 }

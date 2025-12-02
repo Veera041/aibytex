@@ -97,8 +97,9 @@ export default function Navbar() {
           <div className="container mx-auto px-4 py-3 flex justify-between items-center relative">
             {/* Logo */}
             <Link to="/" className="text-xl font-bold text-gray-900">
-              Gidorha
-            </Link>
+  Gido<span className="text-green-500">rha</span>
+</Link>
+
 
             {/* Desktop links (md+) */}
             <ul className="hidden md:flex gap-8 text-gray-700 font-medium list-none marker:hidden m-0 p-0">

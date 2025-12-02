@@ -4,13 +4,13 @@ const portfolioData = [
   {
     id: 1,
     title: "E-Commerce Fashion Store",
-    image: "src/assets/images/ecom1.jpeg",
+    image: "src/assets/images/ecom2.png",
     category: "E-Commerce",
     shortDesc: "A stylish and responsive e-commerce store with product filters and checkout flow.",
     longDesc:
       "Designed and developed a modern e-commerce store for a fashion brand. Includes product listing, filtering, cart & checkout flow, and mobile-first UI. Optimized for SEO and fast loading.",
     tech: ["React", "Vite", "Node.js", "Stripe API"],
-    link: "https://client-fashionstore.com",
+    // link: "https://client-fashionstore.com",
   },
 
   {
@@ -22,7 +22,7 @@ const portfolioData = [
     longDesc:
       "Built a business portfolio site with a focus on branding, services presentation, and inbound lead capture. Includes service pages, contact forms, and SEO setup.",
     tech: ["React", "Vite", "UnoCSS"],
-    link: "https://client-businessportfolio.com",
+    // link: "https://client-businessportfolio.com",
   },
 
   {
@@ -34,7 +34,7 @@ const portfolioData = [
     longDesc:
       "Created a full restaurant ordering system with menu browsing, add-to-cart, table booking, and WhatsApp order integration. Optimized for mobile users.",
     tech: ["React", "Firebase", "WhatsApp API"],
-    link: "https://client-restaurantorder.com",
+    // link: "https://client-restaurantorder.com",
   },
 
   {
@@ -46,7 +46,7 @@ const portfolioData = [
     longDesc:
       "A modern landing page built for paid ad campaigns. Included lead forms, CTA optimization, A/B tested sections, and analytics integrations.",
     tech: ["HTML", "CSS", "React", "GA4"],
-    link: "https://client-marketinglp.com",
+    // link: "https://client-marketinglp.com",
   },
 
   {
@@ -58,7 +58,7 @@ const portfolioData = [
     longDesc:
       "Developed a WhatsApp business automation bot for lead capture and customer support. Integrated with Google Sheets and custom notifications.",
     tech: ["Node.js", "Express", "WhatsApp Cloud API"],
-    link: "https://client-whatsappbot.com",
+    // link: "https://client-whatsappbot.com",
   },
 
   {
@@ -70,7 +70,7 @@ const portfolioData = [
     longDesc:
       "Built a real estate listing platform where users can browse properties, filter by location/price, and contact agents. Included admin dashboard for listing management.",
     tech: ["React", "MySQL", "Node.js"],
-    link: "https://client-realestateplatform.com",
+    // link: "https://client-realestateplatform.com",
   },
 ];
 
